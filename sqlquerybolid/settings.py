@@ -41,11 +41,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    # ===== DRF ========
     'rest_framework',
-
+    # ==== Фильтры django-filter =====
     'django_filters',
-
+    # ====== Подключаем OpenAPI ======
+    'drf_yasg',
+    # ========= MY_APPS ==============
     'bolid.apps.BolidConfig',
 ]
 
