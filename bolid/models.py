@@ -117,7 +117,7 @@ class Bindingconditionstepscen(models.Model):
 
 
 class Bindinggrobjectsstepscen(models.Model):
-#     # id = models.AutoField(db_column='ID')  # Field name made lowercase.
+    # id = models.AutoField(db_column='ID')  # Field name made lowercase.
     id_scendevice = models.ForeignKey('Scenariosdevice', models.DO_NOTHING, db_column='ID_ScenDevice')  # Field name made lowercase.
     access = models.BooleanField(db_column='Access')  # Field name made lowercase.
     id_grobject = models.OneToOneField('Groupobj', models.DO_NOTHING, db_column='ID_GrObject', primary_key=True)  # Field name made lowercase.
@@ -1002,6 +1002,9 @@ class Ppost(models.Model):
     class Meta:
         managed = False
         db_table = 'PPost'
+
+    def __str__(self):
+        return '{}'.format(self.name)
 
 
 class Preason(models.Model):

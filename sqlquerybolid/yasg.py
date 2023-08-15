@@ -6,7 +6,7 @@ from drf_yasg import openapi
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="Sky TODOList API",
+        title="SQL Bolid API DRF",
         default_version='v1',
         description="Test description",
         license=openapi.License(name="License")
