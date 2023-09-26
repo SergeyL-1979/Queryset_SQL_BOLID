@@ -22,8 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # === API Document ===
     path('accounts/', include('rest_framework.urls', namespace="rest_framework")),
-    # path('api-auth/', include('rest_framework.urls')),
-    path("", include('bolid.urls')),
+
+    path("", include(('bolid.urls', 'bolid'), namespace='bolid')),
 ]
 
 urlpatterns += doc_urls

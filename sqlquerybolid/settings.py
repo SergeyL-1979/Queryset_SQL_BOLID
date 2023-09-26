@@ -150,12 +150,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
-    # 'DEFAULT_AUTHENTICATION_CLASSES': [
-    #     # 'rest_framework.authentication.TokenAuthentication',
-    #     'rest_framework_simplejwt.authentication.JWTAuthentication',
-    #     'rest_framework.authentication.BasicAuthentication',
-    #     'rest_framework.authentication.SessionAuthentication',
-    # ],
+    # 'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 10,
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
@@ -166,9 +161,23 @@ REST_FRAMEWORK = {
         ],
 
 }
-# DEFAULT_RENDERER_CLASSES = (
-#     'rest_framework_csv.renderers.CSVRenderer',
-# ),
+# REST_FRAMEWORK = {
+#     'DEFAULT_AUTHENTICATION_CLASSES': [
+#         'rest_framework.authentication.SessionAuthentication',
+#     ],
+#     'DEFAULT_PERMISSION_CLASSES': [
+#         # 'rest_framework.permissions.IsAuthenticated',
+#         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+#     ],
+#     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend', ],
+#
+#     'TEST_REQUEST_DEFAULT_FORMAT': 'json',
+#     'TEST_REQUEST_RENDERER_CLASSES': [
+#         'rest_framework.renderers.MultiPartRenderer',
+#         'rest_framework.renderers.JSONRenderer',
+#         'rest_framework.renderers.TemplateHTMLRenderer'
+#     ]
+# }
 
 DATETIME_FORMAT = '%d.%m.%Y %H:%M'
 TIME_FORMATS = '%H:%M'
