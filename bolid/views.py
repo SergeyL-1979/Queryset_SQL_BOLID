@@ -14,7 +14,6 @@ from bolid.serializers import (
 )
 
 
-# Create your views here.
 class QuerylogViewSet(viewsets.ModelViewSet):
     queryset = Querylog.objects.all()
     serializer_class = QuerylogSerializer
@@ -29,7 +28,7 @@ class PlistViewSet(viewsets.ModelViewSet):
     queryset = Plist.objects.all()
     serializer_class = PListSerializer
     filter_backends = [filters.DjangoFilterBackend, ]
-    filterset_fields = ["name", "company"]
+    filterset_fields = ["company", "post"]
 
 
 class PpostViewSet(viewsets.ModelViewSet):
